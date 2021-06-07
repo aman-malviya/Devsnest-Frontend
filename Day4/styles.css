@@ -23,6 +23,7 @@ body {
     box-shadow: inset 35px 35px 70px #bebebe,
         inset -35px -35px 70px #ffffff;
     transform:rotate(-180deg);
+    border: 2px solid #39a6a3;
 }
 .hinge{
     position: absolute;
