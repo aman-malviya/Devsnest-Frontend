@@ -1,0 +1,29 @@
+body {
+    background-color: #dbe6fd;
+    margin: 30px;
+    padding: 20px;
+    border: solid 1px #293b5f;
+  }
+  
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #293b5f;
+}
+
+.address,
+.greeting {
+    color: #47597e; 
+}
+
+.content {
+    color: #293b5f;
+    font-size: 18px;
+    margin: 40px 0;
+}
+
+table {
+    border: solid 1px #293b5f;
+    align-items: center;
+    padding: 10px;
+}
