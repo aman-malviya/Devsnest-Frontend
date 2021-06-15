@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body {
+    background-color: #22252d;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dosis', sans-serif;
+}
+.toggle{
+    position: absolute;
+    top:0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.toggle > div{
+    background-color: #292d36;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 0 10px;
+    margin-top:10px ;
+}
+.toggle button{
+    border:none;
+    background: none;
+    color: rgba(255, 255, 255, 0.199);
+    padding: 10px;
+    font-size: 1.3rem;
+}
+  
+.calculator {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width:350px;
+    height: 90vh;
+    border-radius: 30px;
+    background-color: #22252d;
+    box-shadow:  20px 20px 40px #20232a,
+             -20px -20px 40px #242730;
+    border:1px solid rgba(238, 238, 238, 0.041);
+}
+.screen{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#screen2{
+    font-size: 2rem;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+.calculator input{
+    border:0;
+    background:none;
+    text-align: right;
+    width: 85%;
+    height: 100%;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    caret-color: #20232a;
+    letter-spacing: 5px;
+}
+.calculator input:focus, .calculator input:active{
+    border:none;
+    outline: none;
+}
+.numpad{
+    background-color: #292d36;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    padding: 30px 0;
+}
+.numpad > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.numpad button{
+    background-color: #22252d;
+    border: 0;
+    width: 60px;
+    height: 60px;
+    color: #dfe0e1;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #242830, #1f2129);
+}
+.numpad button:active{
+    background: linear-gradient(145deg, #1f2129, #242830);
+}
+
+@media (max-width:500px){
+    .calculator{
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+    .numpad{
+        border-radius: 0;
+    }
+}
