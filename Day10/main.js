@@ -26,7 +26,6 @@ let btns=document.getElementsByClassName("flip-card");
 
 for(let i=0; i<16; i++){
     btns[i].addEventListener("click", (e)=>{
-        console.log(matches);
         moves--;
         document.querySelector("span").innerHTML=moves;
         if(moves===-1){
