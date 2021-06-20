@@ -28,20 +28,24 @@ for(let i=0; i<16; i++){
     btns[i].addEventListener("click", (e)=>{
         moves--;
         document.querySelector("span").innerHTML=moves;
-        if(moves===-1){
+        if(moves===0){
             document.querySelector(".popup").style.display="flex";
             document.querySelector(".container").style.display="none";
-            document.querySelector(".popup > div").innerHTML="<h2>You Lose !!</h2><br><br><p>Reload the page to play again.</p>"
+            let h2=document.createElement("h2");
+            document.querySelector(".popup > div > h2").innerHTML="You Lose !!";
         }
         if(click){
             btns[i].firstChild.classList.add("flipped");
             setTimeout(() => {
-                // console.log(btns[i].firstChild.lastChild.innerHTML, click.firstChild.lastChild.innerHTML);
                 if(!(btns[i].firstChild.lastChild.innerHTML === click.firstChild.lastChild.innerHTML)){
                     btns[i].firstChild.classList.remove("flipped");
                     click.firstChild.classList.remove("flipped");
                 }else{
                     matches++;
+                    let cloneBtn=btns[i].cloneNode(true);
+                    btns[i].parentNode.replaceChild(cloneBtn, btns[i]);
+                    let cloneClick=click.cloneNode(true);
+                    click.parentNode.replaceChild(cloneClick, click);
                 }
                 click=undefined;
             }, 500);
@@ -49,10 +53,16 @@ for(let i=0; i<16; i++){
             click=btns[i];
             btns[i].firstChild.classList.add("flipped");
         }
-        if(matches === 8){
-            document.querySelector(".popup").style.display="flex";
-            document.querySelector(".container").style.display="none";
-            document.querySelector(".popup > div").innerHTML="<h2>You Won !!</h2><br><br><p>Reload the page to play again.</p>"
-        }
     })
 }
+setInterval(() => {
+    if(matches === 8){    
+        document.querySelector(".popup").style.display="flex";
+        document.querySelector(".container").style.display="none";
+        document.querySelector(".popup > div > h2").innerHTML="You Won !!"
+    }
+}, 100);
+
+document.getElementById("reload").addEventListener("click", (e)=>{
+    window.location.reload();
+})

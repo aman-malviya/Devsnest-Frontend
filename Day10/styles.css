@@ -5,6 +5,8 @@
 body {
   background: url(./wp2757874.gif);
   background-size: cover;
+  font-family: 'Mate SC', serif !important;
+  transition: all 0.5s;
 }
 .container {
   width: 100vw;
@@ -15,11 +17,9 @@ body {
   align-items: center;
   color: #fff;
 }
-#stats {
-}
 #grid {
   width: 90%;
-  height: 90%;
+  height: 85%;
   display: grid;
   grid-template-rows: repeat(1fr, 4);
   grid-template-columns: repeat(4, 1fr);
@@ -61,7 +61,7 @@ body {
 }
 
 .back {
-  background-color: #2980b9;
+  background-color: #f13636bd;
   color: white;
   transform: rotateY(180deg);
   display: flex;
@@ -94,6 +94,21 @@ body {
 }
 @media (max-width: 600px) {
   h2 {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
+}
+
+#reload{
+  border: 0;
+  background-color: #f13637;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  color: #fff;
+  vertical-align: middle;
+  font-size: 1.2rem !important;
+  margin: 10px 0;
+}
+#reload:active, #reload:focus{
+  outline: none;
 }
