@@ -2,6 +2,7 @@ let words=["Groot", "Knshika", "Divine", "BigO", "Haddi", "Sherl", "KayDee", "Sh
 words=[...words, ...words];
 let moves=30;
 let matches=0;
+let gameActive=true;
 
 for(let i=1; i<=16; i++){
     let card=document.createElement("div");
@@ -26,6 +27,7 @@ let btns=document.getElementsByClassName("flip-card");
 
 for(let i=0; i<16; i++){
     btns[i].addEventListener("click", (e)=>{
+        if(!gameActive)return;
         moves--;
         document.querySelector("span").innerHTML=moves;
         if(moves===0){
@@ -36,6 +38,7 @@ for(let i=0; i<16; i++){
         }
         if(click){
             btns[i].firstChild.classList.add("flipped");
+            gameActive=false;
             setTimeout(() => {
                 if(!(btns[i].firstChild.lastChild.innerHTML === click.firstChild.lastChild.innerHTML)){
                     btns[i].firstChild.classList.remove("flipped");
@@ -48,6 +51,7 @@ for(let i=0; i<16; i++){
                     click.parentNode.replaceChild(cloneClick, click);
                 }
                 click=undefined;
+                gameActive=true;
             }, 500);
         }else{
             click=btns[i];
