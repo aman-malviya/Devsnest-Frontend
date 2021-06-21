@@ -54,16 +54,16 @@ for(let i=0; i<16; i++){
     })
 }
 setInterval(() => {
-    if(matches === 8){    
-        document.querySelector(".popup").style.display="flex";
-        document.querySelector(".container").style.display="none";
-        document.querySelector(".popup > div > h2").innerHTML="You Won !!"
-    }
     if(moves === 0){
         document.querySelector(".popup").style.display="flex";
         document.querySelector(".container").style.display="none";
         let h2=document.createElement("h2");
         document.querySelector(".popup > div > h2").innerHTML="You Lose !!";
+    }
+    if(matches === 8){    
+        document.querySelector(".popup").style.display="flex";
+        document.querySelector(".container").style.display="none";
+        document.querySelector(".popup > div > h2").innerHTML="You Won !!"
     }
 }, 100);
 
