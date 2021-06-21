@@ -30,12 +30,6 @@ for(let i=0; i<16; i++){
         if(!gameActive)return;
         moves--;
         document.querySelector("span").innerHTML=moves;
-        if(moves===0){
-            document.querySelector(".popup").style.display="flex";
-            document.querySelector(".container").style.display="none";
-            let h2=document.createElement("h2");
-            document.querySelector(".popup > div > h2").innerHTML="You Lose !!";
-        }
         if(click){
             btns[i].firstChild.classList.add("flipped");
             gameActive=false;
@@ -64,6 +58,12 @@ setInterval(() => {
         document.querySelector(".popup").style.display="flex";
         document.querySelector(".container").style.display="none";
         document.querySelector(".popup > div > h2").innerHTML="You Won !!"
+    }
+    if(moves === 0){
+        document.querySelector(".popup").style.display="flex";
+        document.querySelector(".container").style.display="none";
+        let h2=document.createElement("h2");
+        document.querySelector(".popup > div > h2").innerHTML="You Lose !!";
     }
 }, 100);
 
