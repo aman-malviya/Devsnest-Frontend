@@ -1,5 +1,22 @@
+function shuffle(array) {
+    var currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+}
 
-const questions=[
+let questions=[
     {
         question:"From which platform at Kings Cross does the Hogwarts Express train depart?",
         option1:"Gringotts",
@@ -9,7 +26,7 @@ const questions=[
         correct:"Nine and three-quarters",
     },
     {
-        question:"Hermiones parents are not wizards. What non-wizard jobs do they do?",
+        question:"Hermione's parents are not wizards. What non-wizard jobs do they do?",
         option1:"Physician",
         option2:"Tailor",
         option3:"Dentists",
@@ -81,6 +98,8 @@ const questions=[
         correct:"Transfiguration",
     }
 ]
+questions=shuffle(questions);
+
 let total=questions.length;
 let answered=0;
 let questionBox=document.getElementById("inner");
@@ -154,6 +173,9 @@ function check(e, question, box){
     if(!gameActive)return;
     if(question.correct == e.target.value){
         score++;
+        if(score<5){
+            h1.innerHTML="Go and watch Harry Potter !!"
+        }
         document.querySelector("h3").innerHTML=score;
         e.target.classList.add("option-correct");
     }else{
@@ -177,3 +199,5 @@ function check(e, question, box){
         gameActive=true;
     }, 1000);
 }
+
+

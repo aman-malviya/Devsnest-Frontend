@@ -18,6 +18,7 @@
     background:#fff;
     position: relative;
     border-radius: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .question{
     position: absolute;
@@ -72,9 +73,11 @@
 }
 .option-correct{
     background-color: #66DE93 !important;
+    border: none !important;
 }
 .option-wrong{
     background-color: #D83A56 !important;
+    border: none !important;
 }
 .score-div{
     width: 100%;
@@ -100,12 +103,18 @@
     text-align: center;
     border-radius: 10px;
 }
+button:active, button:focus{
+    outline: none;
+}
 @media(max-width:600px){
     #inner{
         width: 100%;
         height: 100%;
     }
     .question{
+        border-radius: 0;
+    }
+    #inner{
         border-radius: 0;
     }
     .options-div{
