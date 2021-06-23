@@ -158,7 +158,6 @@ let h1=document.createElement("h1");
 let sc=document.createElement("h1");
 let img=document.createElement("h1");
 
-h1.innerHTML="Congratulations !!";
 sc.innerHTML="<p>Your Score</p><h3>5</h3>";
 img.innerHTML='<i class="fas fa-medal fa-4x"></i>';
 scoreDiv.appendChild(h1);
@@ -173,8 +172,10 @@ function check(e, question, box){
     if(!gameActive)return;
     if(question.correct == e.target.value){
         score++;
-        if(score<5){
+        if(score<=5){
             h1.innerHTML="Go and watch Harry Potter !!"
+        }else{
+            h1.innerHTML="Congratulations !!"
         }
         document.querySelector("h3").innerHTML=score;
         e.target.classList.add("option-correct");
