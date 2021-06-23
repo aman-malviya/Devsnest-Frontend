@@ -71,10 +71,10 @@
     letter-spacing: 1px;
 }
 .option-correct{
-    background-color: green !important;
+    background-color: #66DE93 !important;
 }
 .option-wrong{
-    background-color: red !important;
+    background-color: #D83A56 !important;
 }
 .score-div{
     width: 100%;
