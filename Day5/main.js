@@ -11,14 +11,18 @@ for (item of buttons) {
       buttonText = "*";
       screenValue += buttonText;
       screen.value = screenValue;
-    } else if (buttonText == "=") {
+    }else if(buttonText == "÷"){
+      buttonText = "/";
+      screenValue += buttonText;
+      screen.value = screenValue;
+    }else if (buttonText == "=") {
       if (eval(screenValue)) {
         if(screen2.value == ""){
           screen2.value=screen.value;
         }
-        screen.value = eval(screenValue);
+        screen.value = Math.round(eval(screenValue)*10000000)/10000000;
       } else {
-        screen.value = "bad input";
+        screen.value = "NaN";
       }
     } else if (buttonText == "AC") {
       screenValue = "";
