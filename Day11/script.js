@@ -189,9 +189,11 @@ function check(e, question, box){
     }
     gameActive=false;
     setTimeout(() => {
-        box.style.display="none";
+        box.style.transform="rotateY(-360deg)";
+        setTimeout(() => {
+            box.style.display="none";
+        }, 400);
         answered++;
-        console.log(answered);
         stats.innerHTML="<span>"+(answered==9?"":"0")+(answered+1)+"/10</span>"
         if(answered == total){
             document.querySelector(".score-div").style.display="flex";
