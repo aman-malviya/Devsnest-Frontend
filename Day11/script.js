@@ -189,9 +189,10 @@ function check(e, question, box){
     }
     gameActive=false;
     setTimeout(() => {
-        box.style.transform="rotateY(-360deg)";
+        box.style.transform="translateX(-110%)";
         setTimeout(() => {
-            box.style.display="none";
+            box.style.transform="translateZ(-150px)"
+            box.style.zIndex="-1";
         }, 400);
         answered++;
         stats.innerHTML="<span>"+(answered==9?"":"0")+(answered+1)+"/10</span>"
