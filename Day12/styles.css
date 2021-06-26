@@ -28,7 +28,7 @@ body {
   position: fixed;
   bottom: 0;
   width: 50%;
-  height: 20%;
+  height: 150px;
   background-color: #f4f9f9;
   display: flex;
   flex-direction: column;
@@ -60,6 +60,7 @@ body {
   border-radius: 50%;
   color: #235bd0;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  margin-top: 10px;
 }
 .input button:focus,
 .input button:active {
