@@ -3,19 +3,19 @@ let colors=["#fd8e5f", "#63eaf0", "#fb66f8", "#225ad0"]
 let addBtn= document.getElementById("add");
 let todo=document.querySelector('input');
 
-if(!sessionStorage.getItem("todos")){
-    sessionStorage.setItem("todos", JSON.stringify({
+if(!localStorage.getItem("todos")){
+    localStorage.setItem("todos", JSON.stringify({
 
     }));
 }else{
-    let todos=JSON.parse(sessionStorage.getItem("todos"));
+    let todos=JSON.parse(localStorage.getItem("todos"));
     Object.entries(todos).forEach(todo=>{
         createTodo(todo[0], todo[1]);
     })
 }
 
 function createTodo(todo, status){
-    let todoItems=sessionStorage.getItem("todos");
+    let todoItems=localStorage.getItem("todos");
     
     let todoEl=document.createElement('div');
 
@@ -38,10 +38,10 @@ function createTodo(todo, status){
     btn1.innerHTML="<i class='fas fa-check'></i>"
 
     btn1.addEventListener('click', (e)=>{   
-        let todoItems=JSON.parse(sessionStorage.getItem("todos"));
+        let todoItems=JSON.parse(localStorage.getItem("todos"));
         let todo=btn1.parentNode.previousSibling.innerHTML;
         todoItems[todo]="done";
-        sessionStorage.setItem("todos", JSON.stringify(todoItems));
+        localStorage.setItem("todos", JSON.stringify(todoItems));
         btn1.parentNode.parentNode.style.filter="grayscale(100%)";
         btn1.parentNode.parentNode.style.opacity="0.7";
         btn1.parentNode.parentNode.style.boxShadow="none";
@@ -50,10 +50,10 @@ function createTodo(todo, status){
     let btn2=document.createElement('button');
     btn2.innerHTML="<i class='fas fa-trash'></i>"
     btn2.addEventListener('click', (e)=>{
-        let todoItems=JSON.parse(sessionStorage.getItem("todos"));
+        let todoItems=JSON.parse(localStorage.getItem("todos"));
         let todo=btn2.parentNode.previousSibling.innerHTML;
         delete todoItems[todo];
-        sessionStorage.setItem("todos", JSON.stringify(todoItems));
+        localStorage.setItem("todos", JSON.stringify(todoItems));
         btn2.parentNode.parentNode.style.display="none";    
     })
 
@@ -73,9 +73,9 @@ addBtn.addEventListener('click', (e)=>{
 
 function storeTodo(){
     if(todo.value == "")return;
-    let todoItems=JSON.parse(sessionStorage.getItem("todos"));
+    let todoItems=JSON.parse(localStorage.getItem("todos"));
     todoItems[todo.value]="not-done";
-    sessionStorage.setItem("todos", JSON.stringify(todoItems));
+    localStorage.setItem("todos", JSON.stringify(todoItems));
     createTodo(todo.value);
     todo.value="";
 }
