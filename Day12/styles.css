@@ -132,3 +132,12 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+span{
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+span i{
+  margin-right: 5px;
+}

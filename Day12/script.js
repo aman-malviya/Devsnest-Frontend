@@ -43,7 +43,6 @@ function createTodo(todo, status){
         todoItems[todo]="done";
         localStorage.setItem("todos", JSON.stringify(todoItems));
         btn1.parentNode.parentNode.style.filter="grayscale(100%)";
-        btn1.parentNode.parentNode.style.opacity="0.7";
         btn1.parentNode.parentNode.style.boxShadow="none";
     })
 
