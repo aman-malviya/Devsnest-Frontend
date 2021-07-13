@@ -1,0 +1,15 @@
+h1, h4{
+    font-weight: normal;
+    text-align: start;
+}
+
+.Container{
+    display: flex;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #6b8e23;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em 0.1em gray;
+}

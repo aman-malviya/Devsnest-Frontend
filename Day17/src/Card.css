@@ -1,0 +1,7 @@
+.Card{
+    height: 60vh;
+    width: 40%;
+    padding: 1em;
+    overflow-y: auto;
+    box-shadow: 0.15em 0.15em 0.5em gray, -0.1em -0.1em 0.3em gray;
+}

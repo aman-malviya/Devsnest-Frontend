@@ -1,0 +1,59 @@
+:root {
+      --color-secondary: #00C0B1;
+      --color-primary-light: #9fa1a1;
+      --color-primary-dark: #727272;
+}
+
+* {
+      margin: 0;
+      padding: 0;
+}
+
+body {
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      font-family: sans-serif;
+}
+
+main {
+      width: 90%;
+      height: 60vh;
+}
+
+h1 {
+      margin-top: 1em;
+      font-weight: normal;
+      color: var(--color-primary-dark);
+}
+
+p{
+      color: var(--color-primary-light);
+}
+
+ul {
+      list-style: none;
+}
+
+li {
+      margin: 2em 0 2em 0;
+}
+
+.question {
+      margin-top: 1em;
+}
+
+.answers{
+      margin-top: 2em;
+}
+
+.submit-button {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 0.8em;
+      margin-top: 1em;
+      background-color: var(--color-secondary);
+      color: white;
+      border-radius: 0.4em;
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}

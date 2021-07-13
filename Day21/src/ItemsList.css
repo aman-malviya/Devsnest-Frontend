@@ -1,0 +1,49 @@
+
+.edit-button, .delete-button, .done-button{
+    display: block;
+    width: 45%;
+    height: 2em;
+}
+
+button{
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+}
+
+.Item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 0.5em;
+    border: 1px solid gray;
+}
+
+.ItemsList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.delete-button{
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.text-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+    margin-left: 1em;
+}
+
+.input-header, .actions{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
