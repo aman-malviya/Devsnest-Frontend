@@ -1,0 +1,34 @@
+* {
+  background-color: aliceblue;
+}
+
+.template {
+  max-width: 100%;
+  display: inline-block;
+  border: 15px solid transparent;
+}
+
+.template .image {
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgb(184, 184, 184);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  /* background-size: cover;
+  background-position: center; */
+}
+
+.image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.meme-img {
+  width: 450px;
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

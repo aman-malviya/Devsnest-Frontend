@@ -1,0 +1,40 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+.form-container {
+  margin: auto;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.input-form input {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.data-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.data-form h3 {
+  font-size: 20px;
+  margin: 5px 0;
+}

@@ -1,0 +1,46 @@
+.content {
+  text-align: center;
+  background-color: rgb(199, 199, 199);
+  height: 80vh;
+  border: solid 1px black;
+}
+
+.navbar {
+  background-color: rgb(58, 168, 241);
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 0;
+  border: solid 2px black;
+}
+
+.nav {
+  background-color: rgb(58, 168, 241);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav:hover {
+  cursor: pointer;
+  color: rgb(14, 14, 90);
+}
+/* ul {
+  list-style-type: none;
+} */
+
+.content .btn {
+  background-color: rgb(58, 168, 241);
+  padding: 8px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.content .btn:hover {
+  cursor: pointer;
+  color: rgb(1, 5, 10);
+}
