@@ -1,4 +1,4 @@
-let photos = [
+let photos1 = [
   "./Assets/harry.jpg",
   "./Assets/hermione.jpg",
   "./Assets/hagrid.jpg",
@@ -8,7 +8,22 @@ let photos = [
   "./Assets/ron.jpg",
   "./Assets/severus.jpg",
 ];
-photos = [...photos, ...photos];
+let photos2 = [
+  "./Assets/H.jpg",
+  "./Assets/D.jpg",
+  "./Assets/DM.jpg",
+  "./Assets/HG.jpg",
+  "./Assets/HP.jpg",
+  "./Assets/M.jpg",
+  "./Assets/MM.jpg",
+  "./Assets/SS.jpg",
+];
+let photos;
+if (window.innerWidth > 1000) {
+  photos = [...photos1, ...photos1];
+} else {
+  photos = [...photos2, ...photos2];
+}
 let moves = 30;
 let matches = 0;
 let gameActive = true;
@@ -24,7 +39,6 @@ for (let i = 1; i <= 16; i++) {
   front.classList.add("front");
 
   let back = document.createElement("div");
-
   let rand = Math.floor(Math.random() * (16 - i));
   let image = document.createElement("img");
   image.setAttribute("src", photos[rand]);
@@ -32,7 +46,6 @@ for (let i = 1; i <= 16; i++) {
   image.style.height = "100%";
   image.style.objectFit = "cover";
   photos.splice(rand, 1);
-
   back.classList.add("back");
 
   inner.appendChild(front);

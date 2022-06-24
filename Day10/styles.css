@@ -55,7 +55,7 @@ body {
 }
 
 .back {
-  background-color: #f13636bd;
+  background-color: #000;
   color: white;
   transform: rotateY(180deg);
   /* display: flex;
