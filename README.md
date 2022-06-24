@@ -10,8 +10,8 @@
 <br />
 [Day8 and Day9](https://day8-and-day9.netlify.app/)
 <br />
-[Day10](https://day10-devsnest.netlify.app/)
+[Day10](https://turn-hogwarts.netlify.app/)
 <br />
-[Day11](https://day11-devsnest.netlify.app/)
+[Day11](https://hogwarts-quiz.netlify.app/)
 <br />
-[Day12](https://day12-devsnest.netlify.app/)
+[Day12](https://your-bucket.netlify.app/)

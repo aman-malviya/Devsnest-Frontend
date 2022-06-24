@@ -58,9 +58,10 @@ body {
   background-color: #f13636bd;
   color: white;
   transform: rotateY(180deg);
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  overflow: hidden;
 }
 .flipped {
   transform: rotateY(180deg);
